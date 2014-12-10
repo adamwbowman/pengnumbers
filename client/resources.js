@@ -22,7 +22,7 @@ $(function () {
 			type: 'spline',
 			data: [
 				3021001, 2848881, 2576689, 2379742, 2012701, 1747741,
-				1372312, 1081031, 787001
+				1372312, 1081031,  776605,  475097,  200320
 
 			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], symbol: 'circle', fillColor: 'white' }
@@ -32,7 +32,8 @@ $(function () {
 			type: 'spline',
 			data: [
 				3013463, 2841135, 2596908, 2396973, 2188587, 1956026, 
-				1596891, 1341962, 1120364			],
+				1596891, 1341962, 1109968,  868961,  647260			
+			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[4], symbol: 'circle', fillColor: 'white' }
 		}]
 	});
@@ -56,7 +57,7 @@ $(function () {
 			color: Highcharts.getOptions().colors[3],
 			data: [
 				  80436,  256708,  436253, 682034, 825937, 970138, 
-				1007313, 1020310, 1003706
+				1007313, 1020310,  993310, 933209, 865256, 0
 			]
 		}]
 	});
@@ -79,8 +80,8 @@ $(function () {
 			name: 'YTD Savings',
 			color: Highcharts.getOptions().colors[4],
 			data: [
-				72898, 248962, 456472, 699264, 1001823, 1178423, 
-				1231892, 1281242, 1337069
+				  72898,  248962,  456472,  699264, 1001823, 1178423, 
+				1231892, 1281242, 1326673, 1327073, 1312196, 0
 			]
 		}]
 	});
@@ -110,7 +111,7 @@ $(function () {
 			type: 'spline',
 			data: [
 				2649775, 2510550, 2270402, 2101539, 1768761, 1544975, 
-				1220249,  966710,  697897
+				1220249,  966710,  697897,  426751,  183796
 
 			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], symbol: 'circle', fillColor: 'white' }
@@ -121,7 +122,7 @@ $(function () {
 			type: 'spline',
 			data: [
 				2642237, 2502804, 2290620, 2118770, 1944647, 1753261, 
-				1444828, 1227642, 1031261
+				1444828, 1227642, 1031261,  820616,  630736
 			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[4], symbol: 'circle', fillColor: 'white' }
 		}]
@@ -129,52 +130,52 @@ $(function () {
 });
 
 
-$(function () {
-	$('#chartWagesContainer1').highcharts({
-		chart: { type: 'column' },
-		title: { text: 'Budget vs Actuals' },
-		xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']},
-		yAxis: { min: 0, title: { text: 'In US Dollars' } },
-		tooltip: {
-			headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-			pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' + '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-			footerFormat: '</table>', shared: true, useHTML: true
-		},
-		plotOptions: { column: { pointPadding: 0, borderWidth: 0 } },
-		series: [{
-			name: 'YTD Savings',
-			color: Highcharts.getOptions().colors[3],
-			data: [
-				  80436,  256708,  436253, 682034, 825937, 970138, 
-				1007313, 1020310, 1003706
-			]
-		}]
-	});
-});
+// $(function () {
+// 	$('#chartWagesContainer1').highcharts({
+// 		chart: { type: 'column' },
+// 		title: { text: 'Budget vs Actuals' },
+// 		xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']},
+// 		yAxis: { min: 0, title: { text: 'In US Dollars' } },
+// 		tooltip: {
+// 			headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+// 			pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' + '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+// 			footerFormat: '</table>', shared: true, useHTML: true
+// 		},
+// 		plotOptions: { column: { pointPadding: 0, borderWidth: 0 } },
+// 		series: [{
+// 			name: 'YTD Savings',
+// 			color: Highcharts.getOptions().colors[3],
+// 			data: [
+// 				  80436,  256708,  436253, 682034, 825937, 970138, 
+// 				1007313, 1020310, 1003706, 
+// 			]
+// 		}]
+// 	});
+// });
 
 
-$(function () {
-	$('#chartWagesContainer2').highcharts({
-		chart: { type: 'column' },
-		title: { text: 'Budget vs Actuals w/o Contractors' },
-		xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']},
-		yAxis: { min: 0, title: { text: 'In US Dollars' } },
-		tooltip: {
-			headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-			pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' + '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-			footerFormat: '</table>', shared: true, useHTML: true
-		},
-		plotOptions: { column: { pointPadding: 0, borderWidth: 0 } },
-		series: [{
-			name: 'YTD Savings',
-			color: Highcharts.getOptions().colors[4],
-			data: [
-				  80436,  256708,  436253, 682034, 825937, 970138, 
-				1007313, 1020310, 1003706
-			]
-		}]
-	});
-});
+// $(function () {
+// 	$('#chartWagesContainer2').highcharts({
+// 		chart: { type: 'column' },
+// 		title: { text: 'Budget vs Actuals w/o Contractors' },
+// 		xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']},
+// 		yAxis: { min: 0, title: { text: 'In US Dollars' } },
+// 		tooltip: {
+// 			headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+// 			pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' + '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+// 			footerFormat: '</table>', shared: true, useHTML: true
+// 		},
+// 		plotOptions: { column: { pointPadding: 0, borderWidth: 0 } },
+// 		series: [{
+// 			name: 'YTD Savings',
+// 			color: Highcharts.getOptions().colors[4],
+// 			data: [
+// 				  80436,  256708,  436253, 682034, 825937, 970138, 
+// 				1007313, 1020310, 1003706
+// 			]
+// 		}]
+// 	});
+// });
 
 
 $(function () {
@@ -202,8 +203,8 @@ $(function () {
 			color: Highcharts.getOptions().colors[3],
 			type: 'spline',
 			data: [
-				 2230,   1161,    140, -491, -2002, -4131, 
-				-5018, -10095, -11784
+				 2230,   1161,    140,   -491,   -2002, -4131, 
+				-5018, -10095, -11784, -13152, - 15265 
 			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white' }
 		}]
@@ -236,7 +237,7 @@ $(function () {
 			type: 'spline',
 			data: [
 				5743, 5652, 5652, 5351, 5018, 5061, 
-				4915, 4915, 4915
+				4915, 4915, 4915, 4915, 4915
 			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white' }
 		}]
@@ -269,7 +270,7 @@ $(function () {
 			type: 'spline',
 			data: [
 				19430, 19430, 19056, 18957, 18957, 18907, 
-				18397, 16779, 12707
+				18397, 16779, 12707, 12816, 12816
 			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white' }
 		}]
@@ -306,7 +307,7 @@ $(function () {
 			type: 'spline',
 			data: [
 				68295, 61969, 56924, 55485, 48819, 38720, 
-				31890, 27235, 25386	
+				31890, 27235, 25386, 22494, 20079	
 			],
 			tooltip: { valuePrefix: '$' }, marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white' }
 		}]
